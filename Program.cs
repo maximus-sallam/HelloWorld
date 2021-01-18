@@ -13,15 +13,19 @@ namespace HelloWorld
             int[] userAge = { 21, 22, 23, 24, 25 }; // Declaration of age
             int[] numbers = { 12, 1, 5, -2, 16, 14 };
 
+            string message = "Hello, Grandma. You're ";
+            string anotherMessage = " years old!";
+            string consoleMessage = message + userAge[4] + anotherMessage;
+
             List<int> userAgeList = new List<int> { 11, 21, 31, 41 };
 
-            Console.WriteLine("Hello, grandma! You're " + userAge[4] + " years old!"); // You be old. Get that checked out
+            Console.WriteLine(consoleMessage); // You be old. Get that checked out
             
             Array.Copy(source, dest, 3); // Copying first 3 values from 'source' into 'dest'
             Array.Sort(numbers); // Sort list of 'numbers'
 
-            //Console.WriteLine(dest[3]); // Calling 4th value from 'dest'            
-            //Console.WriteLine(numbers[0]); // Calling 1st value from sorted 'numbers'
+            Console.WriteLine(dest[3]); // Calling 4th value from 'dest'            
+            Console.WriteLine(numbers[0]); // Calling 1st value from sorted 'numbers'
             Console.WriteLine(userAgeList[0]);
             
             Console.Read();
