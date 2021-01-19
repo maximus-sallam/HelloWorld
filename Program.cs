@@ -15,19 +15,27 @@ namespace HelloWorld
 
             string message = "Hello, Grandma. You're ";
             string anotherMessage = " years old!";
-            string consoleMessage = message + userAge[4] + anotherMessage;
+            string consoleMessage = message + userAge[4] + anotherMessage; // Consolidate parts of message
+            string doYou = "Do you recognize any of these names?";
 
-            List<int> userAgeList = new List<int> { 11, 21, 31, 41 };
+            string[] separator = { ", ", "; " }; // Adding name separators
+            string names = "Rick Ross; Ricky Bobby, Rick James, , Rick Sanchez"; // Let's get Rick Rolled
+            string[] substrings = names.Split(separator,
+                StringSplitOptions.RemoveEmptyEntries); // Creating list of names
+
+            List<int> userAgeList = new List<int> { 11, 21, 31, 41 }; // List of numbers
 
             Console.WriteLine(consoleMessage); // You be old. Get that checked out
             
             Array.Copy(source, dest, 3); // Copying first 3 values from 'source' into 'dest'
             Array.Sort(numbers); // Sort list of 'numbers'
 
-            Console.WriteLine(dest[3]); // Calling 4th value from 'dest'            
-            Console.WriteLine(numbers[0]); // Calling 1st value from sorted 'numbers'
-            Console.WriteLine(userAgeList[0]);
-            
+            Console.WriteLine(dest[3]); // Calling 4th value (4) from 'dest'            
+            Console.WriteLine(numbers[0]); // Calling 1st value (-2) from sorted 'numbers'
+            Console.WriteLine(userAgeList[0]); // Calling 1st value (11) from List
+            Console.WriteLine(doYou); // Print 'doYou' string
+            Console.WriteLine(substrings[0] + "\n" + substrings[3]); // Calling split list of Rick's
+
             Console.Read();
         }
     }
