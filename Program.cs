@@ -8,27 +8,27 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            int[] source = { 12, 1, 5, -2, 16, 14 }; // Source numbers
-            int[] dest = { 1, 2, 3, 4, 5 }; // Numbers I will call from
-            int[] userAge = { 21, 22, 23, 24, 25 }; // Declaration of age
+            int[] source = { 12, 1, 5, -2, 16, 14 }; // Source array
+            int[] dest = { 1, 2, 3, 4, 5 }; // Array I will call from
+            int[] userAge = { 21, 22, 23, 24, 25 }; // Declaration of age / array of ages 
             int[] numbers = { 12, 1, 5, -2, 16, 14 };
 
             string message = "Hello, Grandma. You're ";
             string anotherMessage = " years old!";
-            string consoleMessage = message + userAge[4] + anotherMessage; // Consolidate parts of message
+            string consoleMessage = message + userAge[4] + anotherMessage; // Consolidate parts of message 
             string doYou = "Do you recognize any of these names?";
 
             string[] separator = { ", ", "; " }; // Adding string separators
             string names = "Rick Ross, Ricky Bobby; Rick James, , Rick Sanchez"; // Let's get Rick Rolled - Adding string of Rick's
             string[] substrings = names.Split(separator,
-                StringSplitOptions.RemoveEmptyEntries); // Splitting string of Ricks into substrings
+                StringSplitOptions.RemoveEmptyEntries); // Splitting string of Ricks into array of substrings
 
             List<int> userAgeList = new List<int> { 11, 21, 31, 41 }; // List of numbers
 
             Console.WriteLine(consoleMessage); // You be old. Get that checked out
             
-            Array.Copy(source, dest, 3); // Copying first 3 values from 'source' into 'dest'
-            Array.Sort(numbers); // Sort list of 'numbers'
+            Array.Copy(source, dest, 3); // Copying first 3 values from 'source' array into 'dest' array
+            Array.Sort(numbers); // Sort 'numbers' array
 
             Console.WriteLine(dest[3]); // Calling 4th value (4) from 'dest'            
             Console.WriteLine(numbers[0]); // Calling 1st value (-2) from sorted 'numbers'
