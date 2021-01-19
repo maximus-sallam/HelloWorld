@@ -13,8 +13,8 @@ namespace HelloWorld
             int[] userAge = { 21, 22, 23, 24, 25 }; // Array of ages 
             int[] numbers = { 12, 1, 5, -2, 16, 14 }; // Array of random numbers
 
-            string message = "Hello, Grandma. You're {0} years old!";
-            string doYou = "Do you recognize any of these names?";
+            string message = "Hello, Grandma. You're {0} years old!\n";
+            string doYou = "Do you recognize any of these names? Type \"Yes\" or \"No\"\n";
 
             string[] separator = { ", ", "; " }; // Adding string separators
             string names = "Rick Ross, Ricky Bobby; Rick James, , Rick Sanchez"; // Let's get Rick Rolled - Adding string of Rick's
@@ -24,11 +24,13 @@ namespace HelloWorld
             List<int> userAgeList = new List<int> { 11, 21, 31, 41 }; // List of numbers
 
             string question = "Choose a number from 1 to 5: ";
+            
             Console.WriteLine(question); // Ask for a number, stored as string
             
             string num = Console.ReadLine(); // Stores number entry to 'num' string
             int newNum = Convert.ToInt32(num); // Converts string to int
             newNum--; // Reduces the value of newNum by one
+            
             Console.WriteLine(message, userAge[newNum]); // You be old. Get that checked out - Prints newNum to console
             
             Array.Copy(source, dest, 3); // Copying first 3 values from 'source' array into 'dest' array
@@ -39,12 +41,22 @@ namespace HelloWorld
             //Console.WriteLine(userAgeList[0]); // Calling 1st value (11) from List
             
             Console.WriteLine(doYou); // Print 'doYou' string
-            
+
             //Console.WriteLine(substrings[0] + "\n" + substrings[3]); // Calling substrings from split string of Rick's
-            
+
             foreach (var item in substrings) // Print substring array to console
             {
                 Console.WriteLine(item.ToString());
+            }
+
+            string response = (string)Console.ReadLine(); // Stores response to 'response' string
+            if (String.Equals(response, "yes")) // If the string 'response' equals "yes," the console will display "Yay!"
+            {
+                Console.WriteLine("Yay!");
+            }
+            else
+            {
+                Console.WriteLine("Oh noes!");
             }
             Console.Read();
         }
