@@ -18,10 +18,10 @@ namespace HelloWorld
             string consoleMessage = message + userAge[4] + anotherMessage; // Consolidate parts of message
             string doYou = "Do you recognize any of these names?";
 
-            string[] separator = { ", ", "; " }; // Adding name separators
-            string names = "Rick Ross; Ricky Bobby, Rick James, , Rick Sanchez"; // Let's get Rick Rolled
+            string[] separator = { ", ", "; " }; // Adding string separators
+            string names = "Rick Ross, Ricky Bobby; Rick James, , Rick Sanchez"; // Let's get Rick Rolled - Adding string of Rick's
             string[] substrings = names.Split(separator,
-                StringSplitOptions.RemoveEmptyEntries); // Creating list of names
+                StringSplitOptions.RemoveEmptyEntries); // Splitting string of Ricks into substrings
 
             List<int> userAgeList = new List<int> { 11, 21, 31, 41 }; // List of numbers
 
@@ -34,8 +34,11 @@ namespace HelloWorld
             Console.WriteLine(numbers[0]); // Calling 1st value (-2) from sorted 'numbers'
             Console.WriteLine(userAgeList[0]); // Calling 1st value (11) from List
             Console.WriteLine(doYou); // Print 'doYou' string
-            Console.WriteLine(substrings[0] + "\n" + substrings[3]); // Calling split list of Rick's
-
+            Console.WriteLine(substrings[0] + "\n" + substrings[3]); // Calling substrings from split string of Rick's
+            foreach (var item in substrings) // Print substring array to console
+            {
+                Console.WriteLine(item.ToString());
+            }
             Console.Read();
         }
     }
